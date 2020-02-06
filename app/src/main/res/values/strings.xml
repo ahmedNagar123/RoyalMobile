@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Royal Mobile</string>
+
+    <string name="please_wait">please wait</string>
+    <string name="network_connection_error">network_connection_error</string>
+    <string name="anonymous_error">anonymous_error</string>
+    <string name="time_out_error">time_out_error</string>
+
+    <string-array name="demo_Brand">
+
+        <item>xiaomi</item>
+        <item>oppo</item>
+        <item>huawei</item>
+        <item>Apple</item>
+        <item>samsung</item>
+        <item>htc</item>
+        <item>zte</item>
+        <item>Realme</item>
+    </string-array>
+</resources>

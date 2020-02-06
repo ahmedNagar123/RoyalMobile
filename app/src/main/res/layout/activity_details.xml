@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:padding="@dimen/d6"-->
+            <!--                >-->
+
+
+            <TextView
+                android:id="@+id/tvPhoneName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/d24"
+                android:layout_marginTop="@dimen/d6"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginEnd="@dimen/d10"
+                android:padding="@dimen/d6"
+                android:text="Oppo A3S"
+                android:textColor="@color/White"
+                android:textSize="@dimen/s16"
+                android:textStyle="bold"
+                android:fontFamily="@font/stc_regular"
+                android:paddingStart="@dimen/d4"/>
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tvDualSim1"-->
+            <!--                    android:layout_width="@dimen/d90"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="@dimen/d6"-->
+            <!--                    android:text="Dual SIM"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:layout_marginStart="@dimen/d8"-->
+            <!--                    android:textColor="@color/White"-->
+            <!--                    android:textSize="@dimen/s16"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    android:paddingStart="@dimen/d4"-->
+            <!--                    android:fontFamily="@font/stc_regular"/>-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tvStoragecapacity1"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="@dimen/d6"-->
+            <!--                    android:text="64 GB, 4 GB RAM"-->
+            <!--                    android:textColor="@color/White"-->
+            <!--                    android:textSize="@dimen/s16"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    android:layout_marginStart="@dimen/d5"-->
+            <!--                    android:paddingStart="@dimen/d4"-->
+            <!--                    android:fontFamily="@font/stc_regular"-->
+
+            <!--                    />-->
+
+
+
+            <!--            </LinearLayout>-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvHandfone1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/d10"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:layout_marginTop="@dimen/d6"-->
+            <!--                android:text="4G LTE"-->
+            <!--                android:textColor="@color/White"-->
+            <!--                android:textSize="@dimen/s16"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:fontFamily="@font/stc_regular"/>-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPhotoPhoneMain"
+                android:layout_width="@dimen/d120"
+                android:layout_height="@dimen/d150"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/d10"
+                android:layout_marginBottom="@dimen/d10"
+                android:background="@drawable/border_image2"
+                android:padding="5dp"
+                android:src="@drawable/smartphone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPhotoSubPhone1"
+                    android:layout_width="50dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/d64"
+                    android:background="@drawable/border_image2"
+                    android:padding="@dimen/d5"
+                    android:src="@drawable/smartphone" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPhotoSubPhone2"
+                    android:layout_width="50dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/d24"
+                    android:background="@drawable/border_image2"
+                    android:padding="@dimen/d5"
+                    android:src="@drawable/smartphone" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPhotoSubPhone3"
+                    android:layout_width="50dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/d24"
+                    android:background="@drawable/border_image2"
+                    android:padding="@dimen/d5"
+                    android:src="@drawable/smartphone" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPhotoSubPhone4"
+                    android:layout_width="50dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/d20"
+                    android:background="@drawable/border_image2"
+                    android:padding="@dimen/d5"
+                    android:src="@drawable/smartphone" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2,700,00 EGP"
+                android:textSize="@dimen/s18"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/d10"
+                android:fontFamily="@font/stc_regular"
+                android:textStyle="bold"
+                android:padding="@dimen/d5"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPECIFICATIONS"
+                android:fontFamily="@font/stc_regular"
+                android:textSize="@dimen/s18"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/d5"
+                android:layout_marginStart="@dimen/d16"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/d10"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Brand"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Operating System Type"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Package thickness"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Storage Capacity"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/d5"
+                    android:layout_marginTop="@dimen/d5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Oppo"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+
+                        android:id="@+id/tvOperatingSystemType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Android"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvPackagethickness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:maxLines="1"
+                        android:text="17.6 Centimeters"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvStoragecapacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="16 GB"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvReadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read More...."
+                android:fontFamily="@font/stc_regular"
+                android:textSize="@dimen/s16"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/d16"
+                android:layout_marginTop="@dimen/d10"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/llSpecification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/d10"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d3"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Network technology"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="weight in KGs"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Number Of SIM"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Product weight"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Display type "
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Display resolution "
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="card slot"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="loud speaker"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="sound"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="wlan"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="bluetooth"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="gps"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="radio"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="usb"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="battery capacity"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="colors"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="sensors"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="video"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="chipset manufacturer"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="protection layer"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="gpu"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="build product"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Rear camera"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Front camera"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/d20"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="charging type"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/d8"
+                    android:layout_marginStart="@dimen/d10"
+                    android:paddingStart="@dimen/d10"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvNetworktechnology"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="4G LTE"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+
+                        android:id="@+id/tvMobileweightKgs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="100grams"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvDualSim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:text="Dual SIM"
+                        android:fontFamily="@font/stc_regular"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvMobileweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="168 g"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+
+                    <TextView
+                        android:id="@+id/tvDisplayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Super AMOLED capacitive touchscreen"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+
+                        android:id="@+id/tvDisplayResolution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="1080 x 2340 pixels"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvCardSlot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="microSD, up to 256 GB "
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvLoudSpeaker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:padding="@dimen/d2"
+                        android:text="Yes"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+
+                    <TextView
+                        android:id="@+id/tvSound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Dolby Atmos"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+
+                        android:id="@+id/tvWlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="Wi-Fi 802.11"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14" />
+
+                    <TextView
+                        android:id="@+id/tvBluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="bluetooth"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvGps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="gps"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:maxLines="1"
+                        android:text="radio"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvUsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="usb"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvBatteryCapacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="battery capacity"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvColors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="colors"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvSensor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="sensors"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="video"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvChipsetManufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="chipset manufacturer"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvProtectionLayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="protection layer"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"/>
+
+                    <TextView
+                        android:id="@+id/tvGpu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="gpu"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvBuildProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="build product"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvRearcamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Rear camera"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvFrontcamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="Front camera"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvchargingtype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:fontFamily="@font/stc_regular"
+                        android:text="charging type"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/s14"
+                        android:maxLines="1"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvReadLess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read Less"
+                android:fontFamily="@font/stc_regular"
+                android:textSize="@dimen/s16"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/d16"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
