@@ -1,5 +1,6 @@
 package com.example.roylmobile.search;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -14,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.roylmobile.DetailsActivity;
-import com.example.roylmobile.Model.Phono;
+import com.example.roylmobile.Model.Phone;
 import com.example.roylmobile.R;
 import com.google.gson.Gson;
 
@@ -30,8 +31,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     private Context context;
 
     private LayoutInflater inflater;
-    private List<Phono> phonoList;
-    private Phono phono;
+    private List<Phone> phoneList;
+    private Phone phone;
 
 
     public SearchAdapter(Context context){
@@ -47,44 +48,45 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         return new ViewHolder(root);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        phono = phonoList.get(position);
-        if (phono.getDeviceName()==null){
-            holder.tvPhoneName.setText("Not Avaliable");
+        phone = phoneList.get(position);
+        if (phone.getDeviceName()==null){
+            holder.tvPhoneName.setText("Not Available");
         }else {
-            holder.tvPhoneName.setText(phono.getDeviceName());}
-        if (phono.getTriple()==null && phono.getdual_()==null && phono.getquad_()==null&& phono.getprimary_()==null ){
-            holder.tvcameraResolution.setText("CameraResolution:Not Avaliable");
+            holder.tvPhoneName.setText(phone.getDeviceName());}
+        if (phone.getTriple()==null && phone.getdual_()==null && phone.getquad_()==null&& phone.getprimary_()==null ){
+            holder.tvCameraResolution.setText("CameraResolution:Not Available");
         }else {
-            if (phono.getTriple()!=null)
-                holder.tvcameraResolution.setText("CameraResolution: "+phono.getTriple());
-            if (phono.getdual_()!=null)
-                holder.tvcameraResolution.setText("CameraResolution: "+phono.getdual_());
-            if (phono.getquad_()!=null)
-                holder.tvcameraResolution.setText("CameraResolution: "+phono.getquad_());
-            if (phono.getquad_()!=null)
-                holder.tvcameraResolution.setText("CameraResolution: "+phono.getprimary_());
+            if (phone.getTriple()!=null)
+                holder.tvCameraResolution.setText("CameraResolution: "+ phone.getTriple());
+            if (phone.getdual_()!=null)
+                holder.tvCameraResolution.setText("CameraResolution: "+ phone.getdual_());
+            if (phone.getquad_()!=null)
+                holder.tvCameraResolution.setText("CameraResolution: "+ phone.getquad_());
+            if (phone.getquad_()!=null)
+                holder.tvCameraResolution.setText("CameraResolution: "+ phone.getprimary_());
 
         }
-        if (phono.getInternal()==null){
-            holder.tvRam.setText("Ram: Not Avaliable");
+        if (phone.getInternal()==null){
+            holder.tvRam.setText("Ram: Not Available");
         }else {
-            holder.tvRam.setText("Ram: " +phono.getInternal());}
-        if (phono.getTechnology()==null){
-            holder.tvNetworktechnology.setText("Network technology: Not Avaliable");
+            holder.tvRam.setText("Ram: " + phone.getInternal());}
+        if (phone.getTechnology()==null){
+            holder.tvNetworkTechnology.setText("Network technology: Not Available");
         }else {
-            holder.tvNetworktechnology.setText("Network technology: " +phono.getTechnology());}
-        if (phono.getSingle()==null){
-            holder.tvSecondCamera.setText("Second Camera: Not Avaliable");
+            holder.tvNetworkTechnology.setText("Network technology: " + phone.getTechnology());}
+        if (phone.getSingle()==null){
+            holder.tvSecondCamera.setText("Second Camera: Not Available");
         }else {
-            holder.tvSecondCamera.setText("Second Camera: " +phono.getSingle());}
+            holder.tvSecondCamera.setText("Second Camera: " + phone.getSingle());}
         holder.btnSearch.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            Log.e("phone before", new Gson().toJson(phonoList.get(position)));
-            intent.putExtra("mobile", phonoList.get(position));
+            Log.e("phone before", new Gson().toJson(phoneList.get(position)));
+            intent.putExtra("mobile", phoneList.get(position));
             context.startActivity(intent);
         });
 
@@ -92,10 +94,11 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return phonoList!=null?phonoList.size():0;
+        return phoneList !=null? phoneList.size():0;
     }
 
-    public void setMoviesData(List<Phono> phonoList) { this.phonoList=phonoList; }
+    public void setPhoneData(List<Phone> phoneList) { this.phoneList = phoneList;
+    notifyDataSetChanged();}
 
 
 
@@ -108,21 +111,19 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         @BindView(R.id.tvPhoneName)
         TextView tvPhoneName;
         @BindView(R.id.tvcameraResolution)
-        TextView tvcameraResolution;
+        TextView tvCameraResolution;
         @BindView(R.id.tvRam)
         TextView tvRam;
         @BindView(R.id.tvSecondCamera)
         TextView tvSecondCamera;
         @BindView(R.id.tvNetworktechnology)
-        TextView tvNetworktechnology;
+        TextView tvNetworkTechnology;
 
         @BindView(R.id.btnSearch)
         Button btnSearch;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-
-
         }
 
 

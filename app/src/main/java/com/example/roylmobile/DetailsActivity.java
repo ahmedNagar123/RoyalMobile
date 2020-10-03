@@ -1,16 +1,14 @@
 package com.example.roylmobile;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.roylmobile.Model.Phono;
+import com.example.roylmobile.Model.Phone;
 import com.example.roylmobile.base.ParentActivity;
 import com.example.roylmobile.utils.Util;
 import com.google.gson.Gson;
@@ -138,9 +136,9 @@ public class DetailsActivity extends ParentActivity {
     @Override
     protected void init() {
 
-        Phono phono = (Phono)getIntent().getExtras().getSerializable("mobile");
+        Phone phone = (Phone)getIntent().getExtras().getSerializable("mobile");
 
-        Log.e("phone after",new Gson().toJson(phono));
+        Log.e("phone after",new Gson().toJson(phone));
 /*
         if (phono.getDeviceName()==null){
             tvPhoneName.setText("Not Avaliable");}
@@ -193,140 +191,140 @@ public class DetailsActivity extends ParentActivity {
             Log.i("mobname",phono.getDeviceName());
         }
         */
-        if (phono.getDeviceName()!=null && phono.getSim()!=null && phono.getInternal()!=null && phono.getTechnology()!=null) {
-            tvPhoneName.setText(new StringBuilder().append(phono.getDeviceName()).append(" ")
-                    .append( Util.CustomString(phono.getSim())).append("-").append(phono.getInternal())
-                    .append(",").append(phono.getTechnology()).toString());
+        if (phone.getDeviceName()!=null && phone.getSim()!=null && phone.getInternal()!=null && phone.getTechnology()!=null) {
+            tvPhoneName.setText(new StringBuilder().append(phone.getDeviceName()).append(" ")
+                    .append( Util.CustomString(phone.getSim())).append("-").append(phone.getInternal())
+                    .append(",").append(phone.getTechnology()).toString());
         }else
             tvPhoneName.setText("Not Avaliable");
-        if (phono.getBrand()!=null)
-            tvBrand.setText(phono.getBrand());
+        if (phone.getBrand()!=null)
+            tvBrand.setText(phone.getBrand());
         else
             tvBrand.setText("Not Avaliable");
-        if (phono.getOs()!=null)
-            tvOperatingSystemType.setText(phono.getOs());
+        if (phone.getOs()!=null)
+            tvOperatingSystemType.setText(phone.getOs());
         else
             tvOperatingSystemType.setText("__");
 
-        if (phono.getSim()!=null){
-            tvDualSim.setText(phono.getSim());
+        if (phone.getSim()!=null){
+            tvDualSim.setText(phone.getSim());
         }
         else {
             tvDualSim.setText("----");
         }
-        if (phono.getInternal()!=null){
-            tvStoragecapacity.setText(phono.getInternal());
+        if (phone.getInternal()!=null){
+            tvStoragecapacity.setText(phone.getInternal());
         } else{
             tvStoragecapacity.setText("---");
-        } if (phono.getTechnology()!=null){
-            tvNetworktechnology.setText(phono.getTechnology());
+        } if (phone.getTechnology()!=null){
+            tvNetworktechnology.setText(phone.getTechnology());
         } else{
             tvNetworktechnology.setText("Not Avaliable");
         }
 
-        if (phono.getTriple()==null && phono.getdual_()==null && phono.getprimary_()==null && phono.getquad_()==null ){
+        if (phone.getTriple()==null && phone.getdual_()==null && phone.getprimary_()==null && phone.getquad_()==null ){
             tvRearCamera.setText("Not Avaliable");
         }else {
-            if (phono.getTriple()!=null )
-                tvRearCamera.setText( phono.getTriple());
-            if (phono.getdual_()!=null)
-                tvRearCamera.setText(phono.getdual_());
-            if (phono.getprimary_()!=null)
-                tvRearCamera.setText(phono.getprimary_());
-            if (phono.getquad_()!=null)
-                tvRearCamera.setText(phono.getquad_());
+            if (phone.getTriple()!=null )
+                tvRearCamera.setText( phone.getTriple());
+            if (phone.getdual_()!=null)
+                tvRearCamera.setText(phone.getdual_());
+            if (phone.getprimary_()!=null)
+                tvRearCamera.setText(phone.getprimary_());
+            if (phone.getquad_()!=null)
+                tvRearCamera.setText(phone.getquad_());
         }
-        if (phono.getSingle()!=null )
-            tvFrontCamera.setText(phono.getSingle());
+        if (phone.getSingle()!=null )
+            tvFrontCamera.setText(phone.getSingle());
         else
             tvFrontCamera.setText("Not Avaliable");
 
-        if (phono.getWeight()!=null)
-            tvMobileweight.setText(phono.getWeight());
+        if (phone.getWeight()!=null)
+            tvMobileweight.setText(phone.getWeight());
         else
             tvMobileweight.setText("Not Avaliable");
-        if (phono.getsar()!=null)
-            tvMobileweightKgs.setText(phono.getsar());
+        if (phone.getsar()!=null)
+            tvMobileweightKgs.setText(phone.getsar());
         else
             tvMobileweightKgs.setText("Not Avaliable");
-        if (phono.getType()!=null)
-            tvDisplayType.setText(phono.getType());
+        if (phone.getType()!=null)
+            tvDisplayType.setText(phone.getType());
         else
             tvDisplayType.setText("Not Avaliable");
-        if (phono.getResolution()!=null)
-            tvDisplayResolution.setText(phono.getResolution());
+        if (phone.getResolution()!=null)
+            tvDisplayResolution.setText(phone.getResolution());
         else
             tvDisplayResolution.setText("Not Avaliable");
-        if (phono.getCardSlot()!=null)
-            tvCardSlot.setText(phono.getCardSlot());
+        if (phone.getCardSlot()!=null)
+            tvCardSlot.setText(phone.getCardSlot());
         else
             tvCardSlot.setText("Not Avaliable");
-        if (phono.getLoudspeaker()!=null)
-            tvLoudSpeaker.setText(phono.getLoudspeaker());
+        if (phone.getLoudspeaker()!=null)
+            tvLoudSpeaker.setText(phone.getLoudspeaker());
         else
             tvLoudSpeaker.setText("Not Avaliable");
-        if (phono.getSoundC()!=null)
-            tvSound.setText(phono.getSoundC());
+        if (phone.getSoundC()!=null)
+            tvSound.setText(phone.getSoundC());
         else
             tvSound.setText("Not Avaliable");
-        if (phono.getWlan()!=null)
-            tvWlan.setText(phono.getWlan());
+        if (phone.getWlan()!=null)
+            tvWlan.setText(phone.getWlan());
         else
             tvWlan.setText("Not Avaliable");
-        if (phono.getBluetooth()!=null)
-            tvBluetooth.setText(phono.getBluetooth());
+        if (phone.getBluetooth()!=null)
+            tvBluetooth.setText(phone.getBluetooth());
         else
             tvBluetooth.setText("Not Avaliable");
-        if (phono.getGps()!=null)
-            tvGps.setText(phono.getGps());
+        if (phone.getGps()!=null)
+            tvGps.setText(phone.getGps());
         else
             tvGps.setText("Not Avaliable");
-        if (phono.getRadio()!=null)
-            tvRadio.setText(phono.getRadio());
+        if (phone.getRadio()!=null)
+            tvRadio.setText(phone.getRadio());
         else
             tvRadio.setText("Not Avaliable");
-        if (phono.getUsb()!=null)
-            tvUsb.setText(phono.getUsb());
+        if (phone.getUsb()!=null)
+            tvUsb.setText(phone.getUsb());
         else
             tvUsb.setText("Not Avaliable");
-        if (phono.getBatteryC()!=null)
-            tvBatteryCapacity.setText(phono.getBatteryC());
+        if (phone.getBatteryC()!=null)
+            tvBatteryCapacity.setText(phone.getBatteryC());
         else
             tvBatteryCapacity.setText("Not Avaliable");
-        if (phono.getColors()!=null)
-            tvColors.setText(phono.getColors());
+        if (phone.getColors()!=null)
+            tvColors.setText(phone.getColors());
         else
             tvColors.setText("Not Avaliable");
-        if (phono.getSensors()!=null)
-            tvSensor.setText(phono.getSensors());
+        if (phone.getSensors()!=null)
+            tvSensor.setText(phone.getSensors());
         else
             tvSensor.setText("Not Avaliable");
-        if (phono.getVideo()!=null)
-            tvVideo.setText(phono.getVideo());
+        if (phone.getVideo()!=null)
+            tvVideo.setText(phone.getVideo());
         else
             tvVideo.setText("Not Avaliable");
-        if (phono.getChipset()!=null)
-            tvChipsetManufacturer.setText(phono.getChipset());
+        if (phone.getChipset()!=null)
+            tvChipsetManufacturer.setText(phone.getChipset());
         else
             tvChipsetManufacturer.setText("Not Avaliable");
-        if (phono.getprotection_()!=null)
-            tvProtectionLayer.setText(phono.getprotection_());
+        if (phone.getprotection_()!=null)
+            tvProtectionLayer.setText(phone.getprotection_());
         else
             tvProtectionLayer.setText("Not Avaliable");
-        if (phono.getGpu()!=null)
-            tvGpu.setText(phono.getGpu());
+        if (phone.getGpu()!=null)
+            tvGpu.setText(phone.getGpu());
         else
             tvGpu.setText("Not Avaliable");
-        if (phono.getbuild()!=null)
-            tvBuildProduct.setText(phono.getbuild());
+        if (phone.getbuild()!=null)
+            tvBuildProduct.setText(phone.getbuild());
         else
             tvBuildProduct.setText("Not Avaliable");
-        if (phono.getCharging()!=null)
-            tvchargingtype.setText(phono.getCharging());
+        if (phone.getCharging()!=null)
+            tvchargingtype.setText(phone.getCharging());
         else
             tvchargingtype.setText("Not Avaliable");
-        if (phono.getSize()!=null)
-            tvPackagethickness.setText(phono.getSize());
+        if (phone.getSize()!=null)
+            tvPackagethickness.setText(phone.getSize());
         else
             tvPackagethickness.setText("Not Avaliable");
 

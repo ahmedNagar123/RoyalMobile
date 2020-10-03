@@ -8,6 +8,8 @@ public class Constants {
 //    public static final String POLICY_ENG = "https://merlinedu.com/en/privacy-policy/";
 //    public static final String POLICY_AR = "https://merlinedu.com/ar/privacy-policy/";
     public static final String Token = "1a01c2ba2237b1bc1de62f82addf3538360cd0a8de86692c";
+    public static final String BASE_URL="https://fonoapi.freshpixl.com/";
+
 
 
 //    public static final String LOCAL_PREF="local";

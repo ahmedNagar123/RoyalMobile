@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".search.SearchActivity"></activity>
         <activity android:name=".Home.HomeActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>        <activity android:name=".DetailsActivity" />
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name=".DetailsActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

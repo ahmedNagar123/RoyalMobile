@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="?actionBarSize">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/aciBtnBack"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
-        android:layout_width="69dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_back_black_24dp" />
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        tools:viewBindingIgnore="true"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/aciBtnBack"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
